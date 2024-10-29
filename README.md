@@ -1,6 +1,6 @@
 # ystyle
 
-Flutter project for ystyle.
+Flutter project For YStyle Fashion App.
 
 ## Getting Started
 
