@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:ystyle/routes/routes.dart';
-import 'package:ystyle/view/auth/splash_screen.dart';
+import 'package:ystyle/view/navigation_bar/bottom_bar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
         ),
         initialRoute: AppRoutes.splash,
         getPages: AppRoutes.getRoutes(),
-        home: const SplashScreen(),
+        home: BottomBar(),
       );
     });
   }
