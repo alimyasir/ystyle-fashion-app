@@ -4,8 +4,10 @@ import 'package:ystyle/components/k_buttons.dart';
 import 'package:ystyle/components/k_text_fields.dart';
 import 'package:ystyle/constants/app_colors.dart';
 import 'package:ystyle/constants/assets_path.dart';
+import 'package:ystyle/constants/size_config.dart';
 import 'package:ystyle/constants/text_styles.dart';
 import 'package:ystyle/controller/authentication_controller.dart';
+import 'package:ystyle/routes/routes.dart';
 import 'package:ystyle/widgets/spacing.dart'as w ;
 
 class SignupWithEmail extends StatelessWidget {
@@ -19,8 +21,8 @@ class SignupWithEmail extends StatelessWidget {
           return Obx(()=>Scaffold(
             backgroundColor: Colors.transparent,
             body: Container(
-              height: Get.height,
-              width: Get.width,
+              height: SizeConfig.height,
+              width: SizeConfig.width,
               decoration: const BoxDecoration(
                   image: DecorationImage(
                       fit: BoxFit.cover,
@@ -63,7 +65,7 @@ class SignupWithEmail extends StatelessWidget {
                       const w.Space.vertical(2),
                       GetTextField(
                         context: context,
-                        controller: c.passwordController,
+                        controller: c.confirmPasswordController,
                         hintText: 'Confirm Password',
                         obSecureText: c.showPassword.value,
                         suffixIcon: c.showPassword.value
@@ -99,19 +101,21 @@ class SignupWithEmail extends StatelessWidget {
                       ),
                       const w.Space.vertical(1),
                       const KText(
-                        text: 'Don\'t have an account',
+                        text: 'Already Have An Account?',
                         color: Colors.white,
                         fontSize: 15,
                         fontWeight: FontWeight.w500,
                       ),
                       GestureDetector(
-                        onTap: (){},
+                        onTap: (){
+                          Get.offNamed(AppRoutes.loginPage);
+                        },
                         child: const KText(
-                          text: 'Sign Up',
+                          text: 'Login',
                           color: AppColor.whiteColor,
                           textDecoration: TextDecoration.underline,
                           decorationColor: AppColor.whiteColor,
-                          fontSize: 15,
+                          fontSize: 16,
                           fontWeight: FontWeight.w500,
                         ),
                       ),

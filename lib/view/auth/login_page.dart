@@ -4,19 +4,20 @@ import 'package:get/get.dart';
 import 'package:ystyle/components/k_buttons.dart';
 import 'package:ystyle/constants/app_colors.dart';
 import 'package:ystyle/constants/assets_path.dart';
+import 'package:ystyle/constants/size_config.dart';
 import 'package:ystyle/constants/text_styles.dart';
 import 'package:ystyle/routes/routes.dart';
 import 'package:ystyle/widgets/spacing.dart';
 
-class WelcomePage extends StatelessWidget {
-  const WelcomePage({super.key});
+class LoginPage extends StatelessWidget {
+  const LoginPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        height: Get.height,
-        width: Get.width,
+        height: SizeConfig.height,
+        width: SizeConfig.width,
         decoration: const BoxDecoration(
           image: DecorationImage(
               fit: BoxFit.cover,
@@ -27,7 +28,7 @@ class WelcomePage extends StatelessWidget {
           children: [
             Container(
               height: 300,
-              width: Get.width,
+              width: SizeConfig.width,
               color: AppColor.whiteColor,
               padding: const EdgeInsets.symmetric(horizontal: 15,vertical: 20),
               child: Column(
@@ -57,7 +58,6 @@ class WelcomePage extends StatelessWidget {
                     ),
                   ],
                 ),
-
                   RichText(
                     text: TextSpan(
                       children: [
@@ -72,7 +72,9 @@ class WelcomePage extends StatelessWidget {
                               fontWeight: FontWeight.w500,
                             ),
                             recognizer: TapGestureRecognizer()..onTap =
-                                (){}
+                                (){
+                              Get.toNamed(AppRoutes.signUpWithEmail);
+                                }
                         ),
                       ],
                     ),

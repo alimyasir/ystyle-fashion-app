@@ -8,14 +8,29 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-      Future.delayed(const Duration(seconds: 3), () {
-        Get.offNamed(AppRoutes.welcomePage);
-      });
-    return Scaffold(
-      backgroundColor: Colors.black,
-      body: Center(
-        child: KText(text: 'Y Style', textStyle: quinoaTextStyle(fontSize: 60.0,color: Colors.white)),
-      ),
+    return GetBuilder(
+      init: Get.put(SplashController()),
+      builder: (context) {
+        return Scaffold(
+          backgroundColor: Colors.black,
+          body: Center(
+            child: KText(text: 'Y Style', textStyle: quinoaTextStyle(fontSize: 60.0,color: Colors.white)),
+          ),
+        );
+      }
     );
+  }
+}
+class SplashController extends GetxController {
+  Future<void> _navigateToBottomBar() async {
+    await Future.delayed(const Duration(seconds: 3));
+    Get.offNamed(AppRoutes.registerPage);
+
+  }
+
+  @override
+  void onInit() {
+    _navigateToBottomBar();
+    super.onInit();
   }
 }

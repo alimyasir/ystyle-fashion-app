@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:ystyle/components/k_svg_icon.dart';
 import 'package:ystyle/constants/app_colors.dart';
 import 'package:ystyle/constants/assets_path.dart';
+import 'package:ystyle/constants/size_config.dart';
 import 'package:ystyle/constants/text_styles.dart';
 import 'package:ystyle/view/chat/chat_screen.dart';
 import 'package:ystyle/view/create_post/create_post.dart';
@@ -46,7 +47,7 @@ class BottomBar extends StatelessWidget {
             ],
           ),
         ),
-        leadingWidth: Get.width,
+        leadingWidth: SizeConfig.width,
         toolbarHeight: 70,
         automaticallyImplyLeading: false,
       ),
@@ -66,7 +67,7 @@ class BottomBar extends StatelessWidget {
             alignment: Alignment.bottomCenter,
             child: Container(
               height: 75,
-              width: Get.width,
+              width: SizeConfig.width,
               margin: const EdgeInsets.symmetric(vertical: 20,horizontal: 15),
               decoration: BoxDecoration(
                   color: AppColor.blackColor,
