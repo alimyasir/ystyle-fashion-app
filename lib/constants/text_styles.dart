@@ -7,6 +7,7 @@ class KText extends StatelessWidget {
   final double? fontSize;
   final FontWeight? fontWeight;
   final Color? color;
+  final Color? decorationColor;
   final TextDecoration? textDecoration;
   final TextAlign? textAlign;
   final int? maxLines;
@@ -24,6 +25,7 @@ class KText extends StatelessWidget {
     this.maxLines,
     this.overflow,
     this.textStyle,
+    this.decorationColor,
   });
 
   @override
@@ -38,23 +40,26 @@ class KText extends StatelessWidget {
         fontWeight: fontWeight?? FontWeight.w400,
         color: color?? AppColor.blackColor,
         textDecoration: textDecoration?? TextDecoration.none,
+        decorationColor: decorationColor??AppColor.blackColor
       ),
     );
   }
 }
 
-TextStyle kTextStyle({double? fontSize, FontWeight? fontWeight,Color? color,TextDecoration? textDecoration}){
+TextStyle kTextStyle({double? fontSize, FontWeight? fontWeight,
+  Color? color,TextDecoration? textDecoration,Color? decorationColor}) {
   return GoogleFonts.bitter(
       textStyle: TextStyle(
         decoration:textDecoration?? TextDecoration.none,
         fontSize:  fontSize?? 16,
         fontWeight: fontWeight??FontWeight.w400,
         color: color??Colors.black,
+        decorationColor: decorationColor??AppColor.blackColor
       )
   );
 }
 
-TextStyle quinoaTextStyle({fontSize, fontWeight, Color? color}) {
+TextStyle quinoaTextStyle({double? fontSize,FontWeight? fontWeight, Color? color}) {
   return TextStyle(
     fontSize: fontSize,
     color: color??AppColor.blackColor,

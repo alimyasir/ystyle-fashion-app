@@ -10,17 +10,18 @@ Widget kTextButton( {
   Color? textColor,
   double? height,
   double ? width,
+  double ? borderRadius,
 }) {
   return GestureDetector(
     onTap: onPressed,
     child: Container(
-      height:  height?? 50,
+      height:  height?? 60,
       width: width,
       alignment: Alignment.center,
       padding:  const EdgeInsets.symmetric(horizontal: 15),
       decoration: BoxDecoration(
         color: color ?? AppColor.whiteColor,
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(borderRadius??20),
       ),
       child: widget?? KText(
         text: btnText,

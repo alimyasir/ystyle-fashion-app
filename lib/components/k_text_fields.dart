@@ -42,9 +42,9 @@ class GetTextField extends StatelessWidget {
       readOnly: readOnly !=null ?true:false,
       validator: validator,
       controller: controller,
-      cursorColor: Colors.grey,
+      cursorColor: AppColor.greyColor,
       maxLines: 1,
-      style: kTextStyle( fontSize: 15.0,fontWeight: FontWeight.w400),
+      style: kTextStyle( fontSize: 16.0,fontWeight: FontWeight.w500),
       keyboardType: keyboardType ?? TextInputType.text,
       textInputAction: textInputAction??TextInputAction.next,
       obscureText: obSecureText??true,
@@ -54,10 +54,6 @@ class GetTextField extends StatelessWidget {
       decoration: InputDecoration(
         hintText: hintText,
         prefixIcon: prefixIcon!=null? showSvgIconWidget(iconPath: prefixIcon!,height: 25,width: 25):null,
-        suffixIconConstraints: const BoxConstraints(
-            maxHeight: 25.0,
-            maxWidth: 36.0
-        ),
         suffixIcon: suffixIcon != null
             ? IconButton(
           icon: Icon(
@@ -68,25 +64,25 @@ class GetTextField extends StatelessWidget {
           onPressed: suffixOnTap,
         )
             : null,
-        contentPadding: EdgeInsets.symmetric(horizontal:  15,vertical: 20),
-        hintStyle: kTextStyle(color: Colors.grey, fontSize: 15.0,fontWeight: FontWeight.w400),
+        contentPadding: const EdgeInsets.symmetric(horizontal:  15,vertical: 20),
+        hintStyle: kTextStyle(color: Colors.grey, fontSize: 15.0),
         filled: true,
         isDense: true,
         fillColor: Colors.white,
         enabledBorder:  OutlineInputBorder(
-          borderRadius: BorderRadius.circular(10),
+          borderRadius: BorderRadius.circular(5),
           borderSide: const BorderSide(color: AppColor.whiteColor,),
         ),
         focusedBorder:  OutlineInputBorder(
-          borderRadius: BorderRadius.circular(10),
+          borderRadius: BorderRadius.circular(5),
           borderSide:  const BorderSide(color: AppColor.whiteColor,),
         ),
         errorBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(10),
+          borderRadius: BorderRadius.circular(5),
           borderSide: const  BorderSide(color: Colors.red, width: 1.0),
         ),
         focusedErrorBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(10),
+          borderRadius: BorderRadius.circular(5),
           borderSide: const  BorderSide(color: Colors.red, width: 1.0),
         ),
       ),
