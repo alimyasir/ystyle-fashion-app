@@ -21,13 +21,13 @@ Widget kTextButton( {
       padding:  const EdgeInsets.symmetric(horizontal: 15),
       decoration: BoxDecoration(
         color: color ?? AppColor.whiteColor,
-        borderRadius: BorderRadius.circular(borderRadius??20),
+        borderRadius: BorderRadius.circular(borderRadius??10),
       ),
       child: widget?? KText(
         text: btnText,
         textAlign: TextAlign.center,
-        fontSize: 16,
-            fontWeight: FontWeight.w600,
+        fontSize: 18,
+            fontWeight: FontWeight.w700,
             color: textColor??AppColor.blackColor),),
   );
 }

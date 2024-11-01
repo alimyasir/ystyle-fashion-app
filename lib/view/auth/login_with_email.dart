@@ -63,16 +63,21 @@ class LoginWithEmail extends StatelessWidget {
 
                       ),
                       const w.Space.vertical(1),
-                      const Align(
+                       Align(
                         alignment: Alignment.centerRight,
                         child:
-                        KText(text:
-                        'Forgotten Password?',
-                          fontSize: 16,
-                          fontWeight: FontWeight.w500,
-                          textDecoration: TextDecoration.underline,
-                          color: AppColor.whiteColor,
-                          decorationColor: AppColor.whiteColor,
+                        GestureDetector(
+                          onTap: (){
+                            Get.toNamed(AppRoutes.forgotPassword);
+                          },
+                          child: const KText(
+                            text: 'Forgotten Password?',
+                            fontSize: 16,
+                            fontWeight: FontWeight.w500,
+                            textDecoration: TextDecoration.underline,
+                            color: AppColor.whiteColor,
+                            decorationColor: AppColor.whiteColor,
+                          ),
                         ),),
                     ],
                   ),
@@ -81,7 +86,9 @@ class LoginWithEmail extends StatelessWidget {
                     children: [
                       kTextButton(
                           btnText: 'Login',
-                          onPressed: () {},
+                          onPressed: () {
+                            Get.offAllNamed(AppRoutes.chooseUserInfo);
+                          },
                         borderRadius: 10
                       ),
                       const w.Space.vertical(1),

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:ystyle/routes/routes.dart';
-import 'package:ystyle/view/auth/register_page.dart';
 import 'package:ystyle/view/auth/splash_screen.dart';
 
 void main() {

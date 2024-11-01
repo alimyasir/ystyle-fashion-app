@@ -47,7 +47,7 @@ class BottomBar extends StatelessWidget {
             ],
           ),
         ),
-        leadingWidth: SizeConfig.width,
+        leadingWidth: MediaQuery.of(context).size.width,
         toolbarHeight: 70,
         automaticallyImplyLeading: false,
       ),

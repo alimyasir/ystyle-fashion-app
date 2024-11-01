@@ -5,4 +5,7 @@ class AppIcons{
 
 class AppImages{
   static const String bgImg = 'assets/images/bgImg.jpg';
+  static const String suitImg = 'assets/images/suitImg.png';
+  static const String modelImg = 'assets/images/modelImg.jpg';
+  static const String menBgImg = 'assets/images/menBgImg.png';
 }
